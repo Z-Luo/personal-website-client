@@ -41,6 +41,21 @@ $regular-text-size: 1.8rem;
 $regular-text-line-height: 2.8rem;
 
 
+
+@keyframes anim-updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
 @mixin generalTitle {
   display: flex;
   flex-direction: column;
@@ -108,6 +123,41 @@ body{
     font-weight: 400;
     color: white;
     font-size: 2.6rem;
+    position: relative;
+}
+
+.social{
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  background-color: transparent;
+  position:fixed;
+  left: 5rem;
+  bottom: 6rem;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+
+  &__container{
+    cursor: pointer;
+
+    i{
+      color: $secondary-color;
+    }
+  }
+}
+.social__container{
+  position: relative;
+}
+
+.wechat--img{
+  display: none;
+  position: absolute;
+  bottom: 5rem;
+  left: 1px;
+}
+.wechat:hover+img{
+  display: block;
 }
 
 .section{
@@ -364,17 +414,6 @@ margin-top: 7.2rem;
 }
 
 
-@keyframes anim-updown {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(30px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 
 /***********************************************************************************/
 /*ABOUT*/

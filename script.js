@@ -87,9 +87,8 @@ const activatedDot = function (slide) {
     .classList.add("dots__dot--active");
 };
 
-// const slider = document.querySelector(".slider");
-// console.log(slides);
-// slider.style.transform = "scale(0.2)";
+const slider = document.querySelector(".slider");
+slider.style.transform = "scale(1.2)";
 // slider.style.overflow = "visible";
 
 const goToSlide = function (slide) {
