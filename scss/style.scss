@@ -124,6 +124,7 @@ body{
     color: white;
     font-size: 2.6rem;
     position: relative;
+    scroll-behavior: smooth;
 }
 
 .social{
@@ -1261,3 +1262,75 @@ input:focus, textarea:focus {
          0 0 2.5em 2em var(--glow-spread-color),
          inset 0 0 .5em .25em var(--glow-color);
  }
+
+/**********************************************************************************/
+/*contact*/
+/*********************************************************************************/
+ .section--sentence{
+background-color: $hero-color;
+height: 50vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+
+p{
+  color: $hero-color-light;
+  word-break:keep-all;
+  text-align: center;
+  font-size: 3.6rem;
+  line-height: 4rem;
+}
+ }
+
+ .sentence__container{
+  width: 90rem;
+ }
+
+
+ /**********************************************************************************/
+/*footer*/
+/*********************************************************************************/
+
+.footer{
+  background-color: $hero-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50vh;
+  border-top: 1px solid #444;
+
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100rem;
+
+    li{
+ 
+  list-style: none;
+    }
+  }
+
+  &__logo{
+    height: 4.8rem;
+  }
+}
+
+.footer__link{
+  text-decoration: none;
+  color: #eee;
+  font-size: 1.8rem;
+}
+
+.footer__copyright{
+  font-size: 1.6rem;
+  color: $tertiary-color;
+}
+
+.linkedin-link{
+  font-size: 1.6rem;
+  color: $tertiary-color;
+}

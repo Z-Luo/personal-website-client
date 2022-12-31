@@ -57,6 +57,7 @@ body {
   color: white;
   font-size: 2.6rem;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 .social {
@@ -1180,6 +1181,69 @@ input:focus, textarea:focus {
 
 .form__button:active {
   box-shadow: 0 0 0.6em 0.25em var(--glow-color), 0 0 2.5em 2em var(--glow-spread-color), inset 0 0 0.5em 0.25em var(--glow-color);
+}
+
+/**********************************************************************************/
+/*contact*/
+/*********************************************************************************/
+.section--sentence {
+  background-color: #2e313e;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section--sentence p {
+  color: #d5d5d8;
+  word-break: keep-all;
+  text-align: center;
+  font-size: 3.6rem;
+  line-height: 4rem;
+}
+
+.sentence__container {
+  width: 90rem;
+}
+
+/**********************************************************************************/
+/*footer*/
+/*********************************************************************************/
+.footer {
+  background-color: #2e313e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50vh;
+  border-top: 1px solid #444;
+}
+.footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100rem;
+}
+.footer ul li {
+  list-style: none;
+}
+.footer__logo {
+  height: 4.8rem;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #eee;
+  font-size: 1.8rem;
+}
+
+.footer__copyright {
+  font-size: 1.6rem;
+  color: #b0aac0;
+}
+
+.linkedin-link {
+  font-size: 1.6rem;
+  color: #b0aac0;
 }
 
 /*# sourceMappingURL=style.css.map */
