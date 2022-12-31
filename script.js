@@ -140,3 +140,15 @@ dotContainer.addEventListener("click", function (e) {
     activatedDot(slide);
   }
 });
+
+//clear value when reload
+function initValue() {
+  const btnForm = document.querySelector(".form__button");
+  const inputName = document.getElementById("full-name");
+  const inputEmail = document.getElementById("email");
+  const inputMessage = document.getElementById("message");
+  inputName.value = "";
+  inputEmail.value = "";
+  inputMessage.value = "";
+}
+window.onload = initValue;

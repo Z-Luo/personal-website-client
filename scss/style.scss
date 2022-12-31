@@ -909,6 +909,7 @@ height: 10rem;
   margin: 0 10rem;
   height: 100vh;
   // background-color: #44cbe1
+  position: relative;
 }
 
 
@@ -931,6 +932,11 @@ height: 10rem;
 // 
 /* SLIDER */
 .slider {
+border: 1px solid transparent;
+border-radius: 20px;
+box-shadow: 0px 10px 13px 0px #f1f1f1, 0px 5px 5px 5px rgba(0,0,0,0);
+transition: 0.3s;
+
   max-width: 100rem;
   height: 50rem;
   margin: 0 auto;
@@ -938,6 +944,10 @@ height: 10rem;
 
   /* IN THE END */
   overflow: hidden;
+
+  &:hover{
+    box-shadow: 0px 11px 21px 3px rgba(0,0,0,0.1);
+  }
 
 &__btn{
   position: absolute;
@@ -953,6 +963,11 @@ height: 10rem;
   width: 5.5rem;
   font-size: 3.25rem;
   cursor: pointer;
+
+
+i{
+  color:#1c535c;
+}
 
   &--left{
     left: 6%;
@@ -1044,6 +1059,7 @@ height: 10rem;
     font-size: 2.25rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
+  color: #1c535c;
   }
 
   &__text{
@@ -1072,11 +1088,176 @@ color: #3398a9;
   font-weight: 500;
   align-self: end;
   margin: 0;
+
+  color: #1c535c;
   }
 
   &__location{
       font-size: 1.5rem;
+      color: #1c535c;
   }
 }
 
 
+.elem-updown9 {
+  animation: anim-updown 5s infinite;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  img{
+    vertical-align: middle;
+  }
+}
+
+.elem-updown10 {
+  animation: anim-updown 5s infinite;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  img{
+    vertical-align: middle;
+  }
+}
+
+.elem-updown11 {
+  animation: anim-updown 5s infinite;
+  position: absolute;
+  left: 5%;
+  top: 85%;
+  img{
+    vertical-align: middle;
+  }
+}
+
+
+
+/**********************************************************************************/
+/*contact*/
+/*********************************************************************************/
+
+.section--contact{
+  background-color: $hero-color;
+  position: relative;
+}
+
+.container--contact{
+  padding: 13rem 10rem;
+  margin: 0 10rem
+}
+
+.contact__title{
+  @include generalTitle
+}
+
+.contact__description{
+  @include generalDescription;
+  // color: $hero-color;
+  color: $background-color;
+  margin-bottom: 5rem;
+}
+
+.contact__info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+
+.maps{
+  border-radius: 20px;
+}
+
+.form__box{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  label{
+    display: block;
+    font-size: 2.2rem;
+    color: $background-color;
+  }
+}
+
+
+
+input, textarea {
+  // font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: $deep-gray;
+  // rgb(28,28,30)
+  background-color: $tertiary-color;
+  box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  padding: 0.4vw;
+  width: 45rem;
+  height: 3.5rem;
+  transition: .4s;
+}
+
+textarea{
+  height: 13.5rem;
+}
+
+input:hover, textarea:hover {
+  box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 0 .15vw rgba(191, 123, 255, 0.781);
+  background-color: $background-color-light;
+}
+
+
+.form__button {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+ }
+ 
+ .form__button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+ }
+ 
+ .form__button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
+ 
+ .form__button:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
+ }
