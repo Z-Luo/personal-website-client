@@ -58,15 +58,17 @@
         <a href="#"> <img class="nav__logo" src="img/logo.png" alt="" /></a>
         <ul class="nav__links">
           <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">About</a></li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Experiences</a>
+            <a href="#section-about" class="nav__link">About</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Testimonials</a>
+            <a href="#section-experiences" class="nav__link">Experiences</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link nav-cta">Contact me</a>
+            <a href="#section-testimonials" class="nav__link">Testimonials</a>
+          </li>
+          <li class="nav__item">
+            <a href="#section-contact" class="nav__link nav-cta">Contact me</a>
           </li>
         </ul>
       </nav>
@@ -195,7 +197,7 @@
 
       <!-- SECTION ABOUT -->
 
-      <section class="section section--about">
+      <section class="section section--about" id="section-about">
         <img
           src="./img/intro-element-1.png"
           alt="flyingElement"
@@ -338,7 +340,7 @@
 
       <!-- SECTION experience -->
 
-      <section class="section section--experience">
+      <section class="section section--experience" id="section-experiences">
         <img
           src="./img/intro-element-1.png"
           alt="flyingElement"
@@ -544,7 +546,7 @@
       </section>
 
       <!-- SECTION testimonial -->
-      <section class="section section--testimonial">
+      <section class="section section--testimonial" id="section-testimonials">
         <img
           src="./img/intro-element-1.png"
           alt="flyingElement"
@@ -647,7 +649,7 @@
       </section>
 
       <!-- SECTION contact -->
-      <section class="section section--contact">
+      <section class="section section--contact" id="section-contact">
         <div class="container container--contact">
           <div class="contact__title">
             <h3 class="contact__description">CONTACT ME</h3>
@@ -720,16 +722,16 @@
           <a class="footer__link" href="#">Home</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">About</a>
+          <a class="footer__link" href="#section-about">About</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Experiences</a>
+          <a class="footer__link" href="#section-experiences">Experiences</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Testimonials</a>
+          <a class="footer__link" href="#section-testimonials">Testimonials</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Contact Me</a>
+          <a class="footer__link" href="#section-contact">Contact Me</a>
         </li>
       </ul>
       <img src="img/logo.png" alt="Logo" class="footer__logo" />
@@ -743,9 +745,8 @@
         >. All rights reserved.
       </p>
     </footer>
-
+    <script src="./script.js"></script>
     <script src="particles.js"></script>
     <script src="app.js"></script>
-    <script src="./script.js"></script>
   </body>
 </html>
