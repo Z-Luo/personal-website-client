@@ -62,8 +62,8 @@ body {
 }
 
 .cursor-dot {
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
   background-color: #44cbe1;
 }
 
@@ -1648,6 +1648,7 @@ input:focus, textarea:focus {
   }
   .container--about {
     padding: 13rem 7rem;
+    gap: 3rem;
   }
   .about__img-box {
     padding: 0 2rem;

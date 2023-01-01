@@ -131,8 +131,8 @@ body{
 
 // custom cursor
 .cursor-dot{
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
   background-color: $primary-color;
 }
 
@@ -1856,6 +1856,7 @@ height: 8rem;
 
   .container--about{
     padding: 13rem 7rem;
+    gap: 3rem;
    }
 
    .about__img-box{
