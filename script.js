@@ -55,7 +55,7 @@ const handleCounter = (entries, observer) => {
 };
 const counterObserver = new IntersectionObserver(handleCounter, {
   root: null,
-  threshold: 0.5,
+  threshold: 0.6,
 });
 counterObserver.observe(data);
 
