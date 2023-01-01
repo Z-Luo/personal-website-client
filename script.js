@@ -195,4 +195,5 @@ const loader = document.querySelector(".loader--wrapper");
 
 window.addEventListener("load", function () {
   loader.style.opacity = 0;
+  loader.style.visibility = "hidden";
 });
