@@ -1628,6 +1628,13 @@ input:focus, textarea:focus {
     left: 3rem;
     bottom: 4rem;
   }
+  .maps {
+    width: 270px;
+    height: 230px;
+  }
+  input, textarea {
+    width: 30rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
