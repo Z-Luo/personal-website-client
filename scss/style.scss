@@ -126,6 +126,7 @@ body{
     font-size: 2.6rem;
     position: relative;
     
+    
 }
 
 .social{
@@ -190,7 +191,7 @@ body{
     background-color: rgba(46, 49, 62, 0.534);
     height: 100vh;
     padding: 0 4.8rem;
- 
+ position: relative;
   }
 
  
@@ -271,6 +272,32 @@ body{
     color: $background-color;
     box-shadow: inset 0 0 0 3px #fff;
   }}
+
+
+  // mobile-nav
+.btn-mobile-nav{
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+ right: 3rem;
+  display: none;
+}
+
+.icon-mobile-nav{
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #fff;
+}
+
+.icon-mobile-nav[name="close-outline"]{
+  display: none;
+ 
+}
+
+
+
 /************************************************************************************/
 /*HERO*/
 /************************************************************************************/
@@ -329,12 +356,104 @@ body{
   margin-bottom: 3.8rem;
  }
 
+ .scrolldown {
+  --color: white;
+  --sizeX: 30px;
+  --sizeY: 50px;
+  position: relative;
+  width: var(--sizeX);
+  height: var(--sizeY);
+  margin-left: var(sizeX / 2);
+  border: calc(var(--sizeX) / 10) solid var(--color);
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin-top: 10rem;
+}
+
+.scrolldown::before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: var(--color);
+  border-radius: 100%;
+  animation: scrolldown-anim 2s infinite;
+  box-sizing: border-box;
+  box-shadow: 0px -5px 3px 1px #2a547066;
+}
+
+@keyframes scrolldown-anim {
+  0% {
+    opacity: 0;
+    height: 6px;
+  }
+
+  40% {
+    opacity: 1;
+    height: 10px;
+  }
+
+  80% {
+    transform: translate(0, 20px);
+    height: 10px;
+    opacity: 0;
+  }
+
+  100% {
+    height: 3px;
+    opacity: 0;
+  }
+}
+
+.chevrons {
+  padding: 6px 0 0 0;
+  margin-left: -3px;
+  margin-top: 48px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chevrondown {
+  margin-top: -6px;
+  position: relative;
+  border: solid var(--color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
+.chevrondown:nth-child(odd) {
+  animation: pulse54012 500ms ease infinite alternate;
+}
+
+.chevrondown:nth-child(even) {
+  animation: pulse54012 500ms ease infinite alternate 250ms;
+}
+
+@keyframes pulse54012 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+
 /**************************************************************************************/
 /*WELCOME*/
 /****************************************************************************************/
 .section--welcome {
   background-color: #fff;
   position: relative;
+  
 }
 
 .container--welcome{
@@ -436,6 +555,7 @@ margin-top: 7.2rem;
 .section--about {
   background-color: $background-color-light;
   position: relative;
+  
 }
 
 .container--about{
@@ -1152,7 +1272,32 @@ color: #3398a9;
 }
 
 .contact__description{
-  @include generalDescription;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+
+&::before{
+  content: '';
+  width: 0;
+  height: 0;
+  border: 1rem solid transparent;
+  border-bottom-color: rgba(191, 123, 255, 0.781);
+  border-left-color: rgba(191, 123, 255, 0.781);
+  position: absolute;
+  top: 5px;
+  right: -40px;
+}
+&::after{
+  content: '';
+  width: 0;
+  height: 0;
+  border: 1rem solid transparent;
+  border-bottom-color: rgba(191, 123, 255, 0.781);
+  border-right-color: rgba(191, 123, 255, 0.781);
+  position: absolute;
+  top: 5px;
+  left: -40px;
+}
   // color: $hero-color;
   color: $background-color;
   margin-bottom: 5rem;
@@ -1162,6 +1307,7 @@ color: #3398a9;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+  gap: 1.6rem;
 }
 
 
@@ -1265,7 +1411,7 @@ input:focus, textarea:focus {
  }
 
 /**********************************************************************************/
-/*contact*/
+/*motto*/
 /*********************************************************************************/
  .section--sentence{
 background-color: $hero-color;
@@ -1335,3 +1481,380 @@ p{
   font-size: 1.6rem;
   color: $tertiary-color;
 }
+
+
+ /**********************************************************************************/
+/*media below 1456px(smaller laptop)*/
+/*********************************************************************************/
+
+@media (max-width: 91em){
+html{
+  font-size: 56.25%;
+}
+
+.maps{
+  width:500px;
+  height:400px;
+}
+}
+
+
+ /**********************************************************************************/
+/*media below 1286px(landscape tablets)*/
+/*********************************************************************************/
+
+@media (max-width: 80em){
+  html{
+    font-size: 50%;
+  }
+  
+  .maps{
+    width:450px;
+    height:370px;
+  }
+  }
+
+   /**********************************************************************************/
+/*media below 1136px(tablets)*/
+/*********************************************************************************/
+
+
+@media (max-width: 71em){
+  .scrolldown {
+    margin-top: 0;
+  }
+
+ .container--about{
+  grid-template-columns:1fr;
+  justify-items: center;
+  padding: 13rem 25rem;
+ }
+ .about__img{
+  width: 50rem;
+}
+
+.container--experience{
+  padding: 13rem 10rem;
+  margin: 0 3rem
+}
+
+
+.path{
+
+  &__imgbox{
+    &-regis{
+      height: 12rem;
+    }
+
+    &-whc{
+height: 8rem;
+    }
+
+    &-rmh{
+      height: 16rem;
+    }
+
+    &-monash{
+      height: 10rem;
+    }
+
+    &-deakin{
+      height: 15rem;
+    }
+
+    &-eh{
+      height: 12rem;
+    }
+  }
+}
+
+.path__textbox-card {
+  width: 40rem;
+  height: 23rem;
+ }
+
+ .container--contact{
+  padding: 13rem 10rem;
+  margin: 0 1rem
+}
+
+
+
+.section--testimonial{
+  height: 85rem;
+ 
+}
+
+  .maps{
+    width:370px;
+    height:320px;
+  }
+
+  input, textarea {
+    width: 35rem;
+  }
+  }
+
+     /**********************************************************************************/
+/*media below 870px(small tablets)*/
+/*********************************************************************************/
+@media (max-width: 55em){
+  html{
+    font-size: 45%;
+  }
+  
+
+  .btn-mobile-nav{
+    display: block;
+    z-index: 100;
+  }
+
+
+
+  .nav__links{
+    background-color: rgb(51, 51, 51,0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    transition: all 0.5s;
+  
+    //hide nav-mobile
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+.nav__open .nav__links{
+  opacity: 1;
+  pointer-events: auto;
+    visibility: visible;
+}
+
+.nav__open .icon-mobile-nav[name="close-outline"]{
+  display: block;
+}
+.nav__open .icon-mobile-nav[name="menu-outline"]{
+  display: none;
+}
+
+  .nav__link:link,
+  .nav__link:visited {
+    font-size: 3.2rem;
+    
+  }
+
+
+  .container--about{
+    padding: 13rem 7rem;
+   }
+  
+  .container--experience{
+    padding: 13rem 5rem;
+    margin: 0 2rem
+  }
+  
+  
+  .path{
+  
+    &__imgbox{
+      &-regis{
+        height: 10rem;
+      }
+  
+      &-whc{
+  height: 6rem;
+      }
+  
+      &-rmh{
+        height: 13rem;
+      }
+  
+      &-monash{
+        height: 8rem;
+      }
+  
+      &-deakin{
+        height: 12rem;
+      }
+  
+      &-eh{
+        height: 10rem;
+      }
+    }
+  }
+  
+  .path__textbox-card {
+    width: 35rem;
+    height: 20rem;
+   }
+
+   .section--testimonial{
+    padding: 13rem 5rem;
+   margin: 0 5rem;
+  }
+  
+  .container--contact{
+    padding: 13rem 5rem;
+    margin: 0 5rem
+  }
+  .maps{
+    width:300px;
+    height:260px;
+  }
+
+  input, textarea {
+    width: 30rem;
+  }
+  }
+
+/**********************************************************************************/
+/*media below 735px(phones)*/
+/*********************************************************************************/
+@media (max-width: 46em){
+  html{
+    font-size: 45%;
+  }
+  
+  .nav__logo{
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+  }
+
+  .container--about{
+    padding: 13rem 7rem;
+   }
+
+   .about__img-box{
+    padding: 0 2rem;
+  }
+
+   .about__img{
+    width: 35rem;
+  }
+  
+  
+.info__details{
+  &-lists{
+    grid-template-columns: 1fr;
+  }
+}
+  
+  .container--experience{
+    padding: 13rem 5rem;
+    margin: 0 2rem
+  }
+  
+  .data__cards{
+    grid-template-columns: 1fr;
+    gap: 5.6rem;
+    justify-items: center;
+    }
+
+  .path{
+
+    grid-template-columns:1fr;
+  
+    &__imgbox{
+      &-regis{
+        height: 10rem;
+      }
+  
+      &-whc{
+  height: 6rem;
+      }
+  
+      &-rmh{
+        height: 13rem;
+      }
+  
+      &-monash{
+        height: 8rem;
+      }
+  
+      &-deakin{
+        height: 12rem;
+      }
+  
+      &-eh{
+        height: 10rem;
+      }
+    }
+  }
+  
+  .path__textbox-card {
+    width: 35rem;
+    height: 20rem;
+   }
+
+   .path__imgbox:nth-child(2){
+    grid-row: 1;
+   }
+   .path__imgbox:nth-child(6){
+    grid-row: 5;
+   }
+   .path__imgbox:nth-child(10){
+    grid-row: 9;
+   }
+   .path__imgbox:nth-child(14){
+    grid-row: 13;
+   }
+
+   .section--testimonial{
+    padding: 13rem 5rem;
+   margin: 0 5rem;
+  }
+
+  .testimonial__header{
+    line-height: 1.8rem;
+  }
+  
+  .container--contact{
+    padding: 13rem 1rem;
+    margin: 0 1rem
+  }
+
+  .contact__info{
+    grid-template-columns:1fr;
+    gap: 1.6rem;
+  }
+  .maps{
+    width:300px;
+    height:260px;
+  }
+
+  input, textarea {
+    width: 40rem;
+  }
+
+  .footer{
+  
+  
+    ul{
+      display: flex;
+flex-direction: column;
+      gap: 1.2rem;
+      width: 15rem;
+    }
+  }
+  
+  }
+
+/**********************************************************************************/
+/*media below 464px(small phones)*/
+/*********************************************************************************/
+@media (max-width: 29em){
+ 
+  .social{
+    left: 3rem;
+    bottom: 4rem;
+    
+  }  
+  }

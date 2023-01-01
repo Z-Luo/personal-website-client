@@ -152,3 +152,18 @@ function initValue() {
   inputMessage.value = "";
 }
 window.onload = initValue;
+
+//nav button
+const openNav = document.querySelector(".openBtn");
+const closeNav = document.querySelector(".closeBtn");
+const header = document.querySelector(".header");
+const nav = document.querySelector(".nav");
+
+openNav.addEventListener("click", function () {
+  header.classList.add("nav__open");
+  nav.classList.add("nav__open");
+});
+closeNav.addEventListener("click", function () {
+  header.classList.remove("nav__open");
+  nav.classList.remove("nav__open");
+});
