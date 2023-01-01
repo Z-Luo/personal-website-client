@@ -1407,25 +1407,25 @@ color: #3398a9;
   width: 0;
   height: 0;
   border: 1rem solid transparent;
-  border-bottom-color: rgba(191, 123, 255, 0.781);
-  border-left-color: rgba(191, 123, 255, 0.781);
+  border-bottom-color: #BF7BFF;
+  border-left-color: #BF7BFF;
   position: absolute;
-  top: 5px;
-  right: -40px;
+  top: 4px;
+  right: -30px;
 }
 &::after{
   content: '';
   width: 0;
   height: 0;
   border: 1rem solid transparent;
-  border-bottom-color: rgba(191, 123, 255, 0.781);
-  border-right-color: rgba(191, 123, 255, 0.781);
+  border-bottom-color: 	#BF7BFF;
+  border-right-color: 	#BF7BFF;
   position: absolute;
-  top: 5px;
-  left: -40px;
+  top: 4px;
+  left: -30px;
 }
   // color: $hero-color;
-  color: $background-color;
+  color: #fff;
   margin-bottom: 5rem;
 }
 
@@ -1487,10 +1487,10 @@ input:focus, textarea:focus {
 
 
 .form__button {
-  --glow-color: rgb(217, 176, 255);
-  --glow-spread-color: rgba(191, 123, 255, 0.781);
-  --enhanced-glow-color: rgb(231, 206, 255);
-  --btn-color: rgb(100, 61, 136);
+  --glow-color: #D9B0FF;
+  --glow-spread-color: #BF7BFF;
+  --enhanced-glow-color: #E7CEFF;
+  --btn-color: #643D88;
   border: .25em solid var(--glow-color);
   padding: 1em 3em;
   color: var(--glow-color);
@@ -1634,6 +1634,8 @@ html{
     font-size: 50%;
   }
   
+
+
   .maps{
     width:450px;
     height:370px;
@@ -1649,6 +1651,11 @@ html{
   .scrolldown {
     margin-top: 0;
   }
+
+  .cursor-dot, .cursor-outline{
+    display: none;
+      }
+  
 
  .container--about{
   grid-template-columns:1fr;
@@ -1729,6 +1736,7 @@ height: 8rem;
     font-size: 45%;
   }
   
+
 
   .btn-mobile-nav{
     display: block;
@@ -1971,9 +1979,14 @@ flex-direction: column;
       width: 15rem;
     }
   }
-  
+  .form__button::after {
+    display: none;
+    }
+ 
   }
 
+
+ 
 /**********************************************************************************/
 /*media below 464px(small phones)*/
 /*********************************************************************************/
@@ -1984,6 +1997,17 @@ flex-direction: column;
     bottom: 4rem;
   }  
 
+
+
+.hero__heading{
+  text-align: center;
+}
+
+.section--testimonial{
+  padding: 13rem 2rem;
+ margin: 0 2rem;
+}
+
   .maps{
     width:270px;
     height:230px;
@@ -1993,3 +2017,4 @@ flex-direction: column;
     width: 30rem;
   }
   }
+
