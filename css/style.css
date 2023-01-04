@@ -1500,6 +1500,9 @@ input:focus, textarea:focus {
   .scrolldown {
     margin-top: 0;
   }
+  body {
+    cursor: auto;
+  }
   .cursor-dot, .cursor-outline {
     display: none;
   }
